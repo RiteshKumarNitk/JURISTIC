@@ -15,11 +15,27 @@ const Header = () => {
           </div>
           <div className='nav'>
             <ul className={navList ? "small" : "flex"}>
-              {nav.map((list, index) => (
-                <li key={index}>
+              {nav.map((list, index) => {
+                console.log(list);
+                if (list.children) {
+                  return <li key={index}>
+                    <Link to={list.path}>
+                      {list.text}
+                      <select value={undefined} name="" id="">
+                        <option value="">one</option>
+                        <option value="">two</option>
+
+                      </select>
+                    </Link>
+                  </li>
+
+                }
+                return <li key={index}>
                   <Link to={list.path}>{list.text}</Link>
                 </li>
-              ))}
+              }
+
+              )}
             </ul>
           </div>
           <div className='button flex'>

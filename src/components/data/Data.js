@@ -6,6 +6,10 @@ export const nav = [
   {
     text: "about",
     path: "/about",
+    children: [{
+      text: "aboutChild",
+      path: "/about",
+    }]
   },
   {
     text: "services",
