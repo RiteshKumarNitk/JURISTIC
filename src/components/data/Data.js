@@ -4,27 +4,33 @@ export const nav = [
     path: "/",
   },
   {
-    text: "about",
-    path: "/about",
+    text: "Practice Areas",
+    path: "/practice-areas",
     children: [{
       text: "aboutChild",
       path: "/about",
     }]
   },
   {
-    text: "services",
-    path: "/services",
+    text: "Core Team",
+    path: "/core-team",
   },
   {
-    text: "blog",
+    text: "Insights",
     path: "/blog",
+    children: [
+      {
+        text: "article",
+        path: "/about",
+      },
+      {
+        text: "Newsletter",
+        path: "/about",
+      }
+    ]
   },
   {
-    text: "pricing",
-    path: "/pricing",
-  },
-  {
-    text: "contact",
+    text: "contact us",
     path: "/contact",
   },
 ]
