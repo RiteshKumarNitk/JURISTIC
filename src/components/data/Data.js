@@ -6,17 +6,66 @@ export const nav = [
   {
     text: "Practice Areas",
     path: "/practice-areas",
-    children: [{
-      text: "aboutChild",
-      path: "/about",
-    }]
-  },
-  {
-    text: "Core Team",
-    path: "/core-team",
+    children: [
+      {
+        text: "Civil",
+        path: "/about",
+      },
+      {
+        text: "Criminal",
+        path: "/about",
+      },
+      {
+        text: "Banking & Finance",
+        path: "/about",
+      },
+      {
+        text: "Securities Law	",
+        path: "/about",
+      },
+      {
+        text: "Foreign Exchange",
+        path: "/about",
+      },
+      {
+        text: "Intellectual Property Rights",
+        path: "/about",
+      },
+      {
+        text: "Constitutional Law",
+        path: "/about",
+      },
+      {
+        text: "Service Law",
+        path: "/about",
+      },
+      {
+        text: "Alternate Dispute Redressal	",
+        path: "/about",
+      },
+      {
+        text: "Corporate",
+        path: "/about",
+      },
+
+    ]
   },
   {
     text: "Insights",
+    path: "/core-team",
+    children: [
+      {
+        text: "Articles",
+        path: "/about",
+      },
+      {
+        text: "Newsletter",
+        path: "/about",
+      }
+    ]
+  },
+  {
+    text: "Core Team",
     path: "/blog",
     children: [
       {
@@ -34,6 +83,8 @@ export const nav = [
     path: "/contact",
   },
 ]
+
+
 export const featured = [
   {
     cover: "../images/hero/h1.png",

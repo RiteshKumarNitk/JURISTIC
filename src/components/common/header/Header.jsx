@@ -11,7 +11,7 @@ const Header = () => {
     <>
       <header>
         <div className='container flex'>
-          <div className='logo w-10 h-10'>
+          <div className='logo w-15 h-15' >
             <img src='./images/logowithout.png' className="" alt='' />
           </div>
           <div className='nav'>
@@ -21,12 +21,7 @@ const Header = () => {
                 if (list.children) {
                   return <li key={index}>
                     <Link to={list.path}>
-                      {/* {list.text} */}
-                      {/* <select name="" id="">
-                      <option value={""}></option>
-                        <option value="one">one</option>
-                        <option value="two">two</option>
-                      </select> */}
+                    
                       <DropdownOptions label = {list.text} options = {list.children}/>
                     </Link>
                   </li>
