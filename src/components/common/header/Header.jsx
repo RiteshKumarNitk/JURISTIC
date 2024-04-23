@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./header.css"
 import { nav } from "../../data/Data"
 import { Link } from "react-router-dom"
+import DropdownOptions from "../dropdown-options/DropdownOptions"
 
 const Header = () => {
   const [navList, setNavList] = useState(false)
@@ -20,12 +21,13 @@ const Header = () => {
                 if (list.children) {
                   return <li key={index}>
                     <Link to={list.path}>
-                      {list.text}
-                      <select value={undefined} name="" id="">
-                        <option value="">one</option>
-                        <option value="">two</option>
-
-                      </select>
+                      {/* {list.text} */}
+                      {/* <select name="" id="">
+                      <option value={""}></option>
+                        <option value="one">one</option>
+                        <option value="two">two</option>
+                      </select> */}
+                      <DropdownOptions label = {list.text} options = {list.children}/>
                     </Link>
                   </li>
 
