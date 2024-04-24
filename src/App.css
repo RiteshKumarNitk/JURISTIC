@@ -30,13 +30,13 @@ ul {
 }
 button {
   border-radius: 5px;
-  padding: 17px 30px;
-  background: #c2b697;
+  /* padding: 17px 30px; */
+  /* background: #c2b697; */
   border: none;
   border-radius: 50px;
-  color: #fff;
+  /* color: #fff; */
   cursor: pointer;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 button i {
   margin-right: 5px;
