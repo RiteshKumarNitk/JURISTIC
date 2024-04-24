@@ -28,85 +28,42 @@ const Pages = () => {
   return (
     <div className="pages-container">
       <Modal isOpen={isModalOpen}>
-          <div className="modal">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h2>Disclaimer</h2>
+        <div className="modal">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h2>Disclaimer</h2>
+            </div>
+            <div className="relative m-4 w-3/5 min-w-[60%] max-w-[60%] rounded-lg bg-white font-sans text-base font-light leading-relaxed text-blue-gray-500 antialiased shadow-2xl">
+              <div className="flex items-center p-4 font-sans text-2xl antialiased font-semibold leading-snug shrink-0 text-blue-gray-900">
+                Its a simple dialog.
               </div>
-              <div className="modal-body">
-                <p>
-                  As per the rules of the Bar Council of India, lawyers and law
-                  firms are not permitted to solicit their work or advertise in
-                  any manner. By clicking on the “I Agree” button, the user
-                  agrees and acknowledges as under:
-                </p>
-                <ul>
-                  <li>
-                    There has been no advertisement, personal communication,
-                    solicitation, invitation or any other inducement of any sort
-                    whatsoever by or on behalf of Legal Inkwell or any of its
-                    members to solicit any work through this website.
-                  </li>
-                  <li>
-                    All material and information (except any statutory
-                    instruments or judicial precedents) on this website is the
-                    property of Legal Inkwell, and no part thereof shall be
-                    used, with or without adaptation, without the express prior
-                    written consent or approval from Legal Inkwell.
-                  </li>
-                  <li>
-                    The user(s) wishes to gain more information about Legal
-                    Inkwell for his/her/their own information and use.
-                  </li>
-                  <li>
-                    All information about Legal Inkwell on this website is being
-                    provided to the user(s) only on his/her/their specific
-                    request and any information obtained or materials downloaded
-                    from this website is completely at the volition of user(s);
-                    and any transmission, receipt or use of this site would not
-                    create any lawyer-client relationship.
-                  </li>
-                  <li>
-                    The information provided on this website is solely available
-                    at the request of the user(s) for informational purposes
-                    only. It should not be interpreted as a soliciting or
-                    advertisement.
-                  </li>
-                  <li>
-                    Legal Inkwell assumes no liability for the interpretation
-                    and/or use of the information available on this website,
-                    neither does it offer a warranty of any kind, nor express or
-                    implicit authorization of the content included in
-                    www.legalinkwell.com not even through a hyperlink, without
-                    express and written consent from www.legalinkwell.com.
-                  </li>
-                  <li>
-                    The content available on this website does not constitute,
-                    and shall not be construed, as legal advice or a substitute
-                    for legal advice.
-                  </li>
-                  <li>
-                    Legal Inkwell is not liable for any consequence of any
-                    action taken by the user(s) relying on material/information
-                    provided on this website or through any external links
-                    thereon.
-                  </li>
-                  <li>
-                    This website is a resource for informational purposes only
-                    and though intended, is not promised or guaranteed, to be
-                    complete or updated. Legal Inkwell does not warrant that the
-                    information contained on this website is accurate or
-                    complete, and hereby disclaims any and all liability to any
-                    person for any loss or damage caused by errors or omissions,
-                    whether such errors or omissions result from negligence,
-                    accident or any other cause.
-                  </li>
-                </ul>
+              <div className="relative p-4 font-sans text-base antialiased font-light leading-relaxed border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 text-blue-gray-500">
+                The key to more success is to have a lot of pillows. Put it this
+                way, it took me twenty five years to get these plants, twenty five
+                years of blood sweat and tears, and I&apos;m never giving up,
+                I&apos;m just getting started. I&apos;m up to something. Fan luv.
+              </div>
+              <div className="flex flex-wrap items-center justify-end p-4 shrink-0 text-blue-gray-500">
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="px-6 py-3 mr-1 font-sans text-xs font-bold text-red-500 uppercase transition-all rounded-lg middle none center hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="middle none center rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                >
+                  Confirm
+                </button>
               </div>
             </div>
           </div>
-          <button onClick={() => setIsModalOpen(false)}>Accept </button>
+        </div>
       </Modal>
+
+
+      
       <Router>
         <Header />
         <Switch>

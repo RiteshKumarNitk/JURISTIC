@@ -28,7 +28,6 @@ import {
   TagIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const navListMenuItems = [
   {
@@ -160,6 +159,7 @@ function NavListMenu() {
 }
 
 function NavList() {
+ 
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
@@ -188,6 +188,7 @@ function NavList() {
 }
 
 export default function Header() {
+  const imgUrl = "../images/about.jpg"; // Define your image URL here
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -198,16 +199,11 @@ export default function Header() {
   }, []);
 
   return (
-    <Navbar className="mx-auto shadow-none border-none px-4 py-3 ">
+    <Navbar className="mx-auto shadow-none border-none px-4 py-4 ">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-        >
-          img
-        </Typography>
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4">
+       <img src={imgUrl} />
+     </a>
         <div className="hidden lg:block">
           <NavList />
         </div>
