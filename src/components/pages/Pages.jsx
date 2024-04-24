@@ -20,6 +20,10 @@ import IntellectualPropertyRights from "../intellectual-property-rights/Intellec
 import ConstitutionalLaw from "../constitutional-law/ConstitutionalLaw";
 import ServiceLaw from "../service-law/ServiceLaw";
 import AlternateDisputeResolution from "../alternate-dispute-resolution/AlternateDisputeResolution";
+import CoreTeam from "../coreTeam/CoreTeam";
+// import NewsLetter from "../newsletter/newsletter";
+import Newsltr from "../newsltr/Newsltr";
+import Articles from "../articles/Articles";
 
 
 
@@ -91,6 +95,9 @@ const Pages = () => {
           <Route exact path="/constitutional-law" component={ConstitutionalLaw} />
           <Route exact path="/service-law" component={ServiceLaw} />
           <Route exact path="/alternate-dispute-resolution" component={AlternateDisputeResolution} />
+          <Route exact path="/CoreTeam" component={CoreTeam} />
+          <Route exact path="/Newsltr" component={Newsltr} />
+          <Route exact path="/Articles" component={Articles} />
         </Switch>
         <Footer />
       </Router>

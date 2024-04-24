@@ -4,7 +4,7 @@ import Back from "../common/Back";
 import Heading from "../common/Heading";
 // import img from "../images/about.jpg"
 import { Button } from "@material-tailwind/react";
-const IntellectualPropertyRights = () => {
+const CoreTeam = () => {
 
 
   const imgUrl =
@@ -69,12 +69,9 @@ const IntellectualPropertyRights = () => {
           </div>
         </div>
       </section>
-      <ol>
-        <li>Property Law</li>
-        <li>Family Law</li>
-      </ol>
+     
     </div>
   )
 }
 
-export default IntellectualPropertyRights
+export default CoreTeam

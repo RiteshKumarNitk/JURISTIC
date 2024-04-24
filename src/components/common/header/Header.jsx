@@ -29,6 +29,8 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+import img from "../../images/image/1.jpg"
 const navListMenuItems = [
   {
     title: "Civil",
@@ -97,7 +99,7 @@ const navListMenuItemsInsights = [
     title: "NewsLetter",
     description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
-    path: "/newsletter",
+    path: "/Newsltr",
   },
 
 ];
@@ -109,12 +111,7 @@ function NavListMenu() {
     ({ icon, title, description, path }, key) => (
       <Link to={path} key={key}>
         <MenuItem className=" flex text-center justify-center  ">
-          <div className="items-start flex rounded-lg !bg-blue-gray-50 p-2 ">
-            {React.createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 text-gray-900 w-6",
-            })}
-          </div>
+         
           <div>
             <Typography
               variant="h6"
@@ -178,18 +175,18 @@ function NavListMenuInsights() {
   const renderItems = navListMenuItemsInsights.map(
     ({ icon, title, description, path }, key) => (
       <Link to={path} key={key}>
-        <MenuItem className=" flex text-center justify-center  ">
-          <div className="items-start flex rounded-lg !bg-blue-gray-50 p-2 ">
+        <MenuItem className=" flex flex-col  ">
+          {/* <div className="items-start flex rounded-lg !bg-blue-gray-50 p-2 ">
             {React.createElement(icon, {
               strokeWidth: 2,
               className: "h-6 text-gray-900 w-6",
             })}
-          </div>
+          </div> */}
           <div>
             <Typography
               variant="h6"
               color="blue-gray"
-              className=" items-start text-sm font-bold"
+              className=" text-sm font-bold"
             >
               {title}
             </Typography>
@@ -258,7 +255,7 @@ function NavList() {
       <NavListMenu />
       <Typography
         as={Link} // Use Link instead of a
-        to="/" // Specify the home path
+        to="/CoreTeam" // Specify the home path
         variant="small"
         color="blue-gray"
         className="font-medium"
@@ -285,7 +282,6 @@ function NavList() {
 }
 
 export default function Header() {
-  const imgUrl = "../images/about.jpg"; // Define your image URL here
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -296,11 +292,12 @@ export default function Header() {
   }, []);
 
   return (
-    <Navbar className="mx-auto shadow-none border-none px-4 py-4 ">
+    <div className="sticky top-0 z-50 bg-white shadow-md">
+    <Navbar className="mx-auto shadow-none border-none px-4 py-4">
       <div className="flex items-center justify-between text-blue-gray-900">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4">
-       <img src={imgUrl} />
-     </a>
+        <a href="#" className="flex title-font font-medium items-center w-16 h-16 text-gray-900 mb-4">
+          <img src={img} alt="" />
+        </a>
         <div className="hidden lg:block">
           <NavList />
         </div>
@@ -331,5 +328,6 @@ export default function Header() {
         </div>
       </Collapse>
     </Navbar>
+  </div>
   );
 }
