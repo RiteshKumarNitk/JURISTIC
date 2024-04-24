@@ -11,6 +11,15 @@ import Contact from "../contact/Contact";
 // import Disclaimer from "../disclaimer/disclaimer";
 import Modal from "react-modal"; // Import react-modal
 import "./style.css"; // Import the CSS file for styling
+import Civil from "../civil/Civil";
+import Criminal from "../criminal/Criminal";
+import BankingFinance from "../banking-finance/BankingFinance";
+import SecuritiesLaws from "../securities-laws/SecuritiesLaws";
+import ForeignExchange from "../foreign-exchange/ForeignExchange";
+import IntellectualPropertyRights from "../intellectual-property-rights/IntellectualPropertyRights";
+import ConstitutionalLaw from "../constitutional-law/ConstitutionalLaw";
+import ServiceLaw from "../service-law/ServiceLaw";
+import AlternateDisputeResolution from "../alternate-dispute-resolution/AlternateDisputeResolution";
 
 
 
@@ -116,6 +125,15 @@ const Pages = () => {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/pricing" component={Pricing} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/civil" component={Civil} />
+          <Route exact path="/criminal" component={Criminal} />
+          <Route exact path="/banking-finance" component={BankingFinance} />
+          <Route exact path="/securities-laws" component={SecuritiesLaws} />
+          <Route exact path="/foreign-exchange" component={ForeignExchange} />
+          <Route exact path="/intellectual-property-rights" component={IntellectualPropertyRights} />
+          <Route exact path="/constitutional-law" component={ConstitutionalLaw} />
+          <Route exact path="/service-law" component={ServiceLaw} />
+          <Route exact path="/alternate-dispute-resolution" component={AlternateDisputeResolution} />
         </Switch>
         <Footer />
       </Router>

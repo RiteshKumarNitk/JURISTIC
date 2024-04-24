@@ -35,56 +35,72 @@ const navListMenuItems = [
     title: "Civil",
     description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
-    path: "/about",
+    path: "/civil",
   },
   {
     title: "Criminal",
     description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
-    path: "/about",
+    path: "/criminal",
   },
   {
     title: "Banking & Finance",
     description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
-    path: "/about",
+    path: "/banking-finance",
   },
   {
     title: "Securities Law",
     description: "Learn how we can help you achieve your goals.",
     icon: SunIcon,
-    path: "/about",
+    path: "/securities-laws",
   },
   {
     title: "Foreign Exchange",
     description: "Reach out to us for assistance or inquiries",
     icon: GlobeAmericasIcon,
-    path: "/about",
+    path: "/foreign-exchange",
   },
   {
     title: "Intellectual Property Rights",
     description: "Find the perfect solution for your needs.",
     icon: PhoneIcon,
-    path: "/contact",
+    path: "/intellectual-property-rights",
   },
   {
     title: "Constitutional Law",
     description: "Read insightful articles, tips, and expert opinions.",
     icon: NewspaperIcon,
-    path: "/about",
+    path: "/constitutional-law",
   },
   {
     title: "Service Law",
     description: "Find the perfect solution for your needs.",
     icon: RectangleGroupIcon,
-    path: "/about",
+    path: "/service-law",
   },
   {
     title: "Alternate Dispute Redressal	",
     description: "Explore limited-time deals and bundles",
     icon: TagIcon,
-    path: "/about",
+    path: "/alternate-dispute-resolution",
   },
+];
+
+const navListMenuItemsInsights = [
+  {
+    title: "Articles",
+    description: "Find the perfect solution for your needs.",
+    icon: SquaresPlusIcon,
+    path: "/articles",
+  },
+  {
+    title: "NewsLetter",
+    description: "Find the perfect solution for your needs.",
+    icon: SquaresPlusIcon,
+    path: "/newsletter",
+  },
+
 ];
 
 function NavListMenu() {
@@ -130,18 +146,86 @@ function NavListMenu() {
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              Resources
+              Practice Areas
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                  }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                  }`}
+              />
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
+          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+            {renderItems}
+          </ul>
+        </MenuList>
+      </Menu>
+      <div className="block lg:hidden">
+        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
+      </div>
+    </React.Fragment>
+  );
+}
+
+function NavListMenuInsights() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const renderItems = navListMenuItemsInsights.map(
+    ({ icon, title, description, path }, key) => (
+      <Link to={path} key={key}>
+        <MenuItem className=" flex text-center justify-center  ">
+          <div className="items-start flex rounded-lg !bg-blue-gray-50 p-2 ">
+            {React.createElement(icon, {
+              strokeWidth: 2,
+              className: "h-6 text-gray-900 w-6",
+            })}
+          </div>
+          <div>
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className=" items-start text-sm font-bold"
+            >
+              {title}
+            </Typography>
+          </div>
+        </MenuItem>
+      </Link>
+    )
+  );
+
+  return (
+    <React.Fragment>
+      <Menu
+        open={isMenuOpen}
+        handler={setIsMenuOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+      >
+        <MenuHandler>
+          <Typography as="div" variant="small" className="font-medium">
+            <ListItem
+              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              selected={isMenuOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              insights
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                  }`}
+              />
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                  }`}
               />
             </ListItem>
           </Typography>
@@ -172,6 +256,19 @@ function NavList() {
         <ListItem className="flex items-center gap-2 py-2">Home</ListItem>
       </Typography>
       <NavListMenu />
+      <Typography
+        as={Link} // Use Link instead of a
+        to="/" // Specify the home path
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          Core Team
+        </ListItem>
+      </Typography>
+
+      <NavListMenuInsights />
       <Typography
         as={Link} // Use Link instead of a
         to="/contact" // Specify the contact path
