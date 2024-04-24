@@ -12,6 +12,9 @@ import Contact from "../contact/Contact";
 import Modal from "react-modal"; // Import react-modal
 import "./style.css"; // Import the CSS file for styling
 
+
+
+
 Modal.setAppElement("#root"); // Set the app element for modal accessibility
 
 const Pages = () => {
@@ -19,9 +22,8 @@ const Pages = () => {
   const [isModalOpen, setIsModalOpen] = useState(true); // State to control modal visibility
 
   useEffect(() => {
-    // Open the modal when the component mounts
     setIsModalOpen(true);
-  }, []); // Run only once when the component mounts
+  }, []);
 
   return (
     <div className="pages-container">
