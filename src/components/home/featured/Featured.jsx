@@ -14,6 +14,7 @@ const Featured = () => {
           {/* <FeaturedCard /> */}
           <TeamSection12/>
           {/* <SampleCard /> */}
+          
         </div>
       </section>
     </>

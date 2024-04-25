@@ -30,7 +30,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-import img from "../../images/image/1.jpg"
+import img from "../../images/image/1.jpg";
 const navListMenuItems = [
   {
     title: "Civil",
@@ -101,7 +101,6 @@ const navListMenuItemsInsights = [
     icon: SquaresPlusIcon,
     path: "/Newsltr",
   },
-
 ];
 
 function NavListMenu() {
@@ -111,7 +110,6 @@ function NavListMenu() {
     ({ icon, title, description, path }, key) => (
       <Link to={path} key={key}>
         <MenuItem className=" flex text-center justify-center  ">
-         
           <div>
             <Typography
               variant="h6"
@@ -145,13 +143,15 @@ function NavListMenu() {
               Practice Areas
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}
               />
             </ListItem>
           </Typography>
@@ -192,6 +192,7 @@ function NavListMenuInsights() {
             </Typography>
           </div>
         </MenuItem>
+       
       </Link>
     )
   );
@@ -215,13 +216,15 @@ function NavListMenuInsights() {
               insights
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}
               />
             </ListItem>
           </Typography>
@@ -240,7 +243,6 @@ function NavListMenuInsights() {
 }
 
 function NavList() {
- 
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
@@ -293,41 +295,44 @@ export default function Header() {
 
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md">
-    <Navbar className="mx-auto shadow-none border-none px-4 py-4">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <a href="#" className="flex title-font font-medium items-center w-16 h-16 text-gray-900 mb-4">
-          <img src={img} alt="" />
-        </a>
-        <div className="hidden lg:block">
+      <Navbar className="mx-auto shadow-none border-none px-4 py-4">
+        <div className="flex items-center justify-between text-blue-gray-900">
+          <a
+            href="#"
+            className="flex title-font font-medium items-center w-16 h-16 text-gray-900 mb-4"
+          >
+            <img src={img} alt="" />
+          </a>
+          <div className="hidden lg:block">
+            <NavList />
+          </div>
+          <div className="hidden gap-2 lg:flex">
+            <Button variant="gradient" size="sm">
+              Sign In
+            </Button>
+          </div>
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            className="lg:hidden"
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            ) : (
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            )}
+          </IconButton>
+        </div>
+        <Collapse open={openNav}>
           <NavList />
-        </div>
-        <div className="hidden gap-2 lg:flex">
-          <Button variant="gradient" size="sm">
-            Sign In
-          </Button>
-        </div>
-        <IconButton
-          variant="text"
-          color="blue-gray"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
-      </div>
-      <Collapse open={openNav}>
-        <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="gradient" size="sm" fullWidth>
-            Sign In
-          </Button>
-        </div>
-      </Collapse>
-    </Navbar>
-  </div>
+          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+            <Button variant="gradient" size="sm" fullWidth>
+              Sign In
+            </Button>
+          </div>
+        </Collapse>
+      </Navbar>
+    </div>
   );
 }

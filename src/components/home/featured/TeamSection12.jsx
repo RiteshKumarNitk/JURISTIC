@@ -9,37 +9,39 @@ import {
   
   function TeamCard({ img, name, title }) {
     return (
-      <Card className="rounded-lg bg-[#FAFAFA]" shadow={false}>
-        <CardBody className="text-center">
-          <Avatar
-            src={img}
-            alt={name}
-            variant="circular"
-            size="xxl"
-            className="mx-auto mb-6 object-top"
-          />
-          <Typography variant="h5" color="blue-gray" className="!font-medium text-lg">
-            {name}
-          </Typography>
-          <Typography
-            color="blue-gray"
-            className="mb-2 !text-base !font-semibold text-gray-600"
-          >
-            {title}
-          </Typography>
-          <div className="flex items-center justify-center gap-1.5">
-            <IconButton variant="text" color="gray">
-              <i className="fa-brands fa-twitter text-lg" />
-            </IconButton>
-            <IconButton variant="text" color="gray">
-              <i className="fa-brands fa-linkedin text-lg" />
-            </IconButton>
-            <IconButton variant="text" color="gray">
-              <i className="fa-brands fa-dribbble text-lg" />
-            </IconButton>
-          </div>
-        </CardBody>
-      </Card>
+      <Card className="gap-4" shadow={false} style={{ width: 'auto', height: 'auto' }}>
+      <CardBody className="text-center">
+      <Avatar
+  src={img}
+  alt={name}
+  variant="rectangle" // corrected variant spelling
+  size="xxxl" // Increase the size of the avatar
+  className="mx-auto mb-16 object-top" // Increase margin bottom for better spacing
+/>
+
+        <Typography variant="h5" color="blue-gray" className="font-medium text-xl mb-2"> {/* Increase text size */}
+          {name}
+        </Typography>
+        <Typography
+          color="blue-gray"
+          className="text-base font-semibold text-gray-600 mb-4" // Increase margin bottom for better spacing
+        >
+          {title}
+        </Typography>
+        <div className="flex items-center justify-center gap-2">
+          <IconButton variant="text" color="gray">
+            <i className="fa-brands fa-twitter text-lg" />
+          </IconButton>
+          <IconButton variant="text" color="gray">
+            <i className="fa-brands fa-linkedin text-lg" />
+          </IconButton>
+          <IconButton variant="text" color="gray">
+            <i className="fa-brands fa-dribbble text-lg" />
+          </IconButton>
+        </div>
+      </CardBody>
+    </Card>
+    
     );
   }
   

@@ -14,9 +14,9 @@ const Home = () => {
       <Featured />
       <Recent />
       <Awards />
-      <Location />
       <Team />
       <Price />
+      <Location />
     </>
   )
 }
