@@ -1,61 +1,59 @@
 import { Typography, Card } from "@material-tailwind/react";
 import { AccordionDefault } from "./AccorditionDefault";
 import Back from "../common/Back";
-import Heading from "../common/Heading";
+// import Heading from "../common/Heading";
 // import img from "../images/about.jpg"
-import { Button } from "@material-tailwind/react"
+// import { Button } from "@material-tailwind/react"
 import img from "../images/image/10.png";
-function StatsCard({ count, title, description }) {
+// function StatsCard({ count, title, description }) {
 
+//   return (
+//     <Card color="transparent" shadow={false}>
+//       <Typography
+//         variant="gradient"
+//         className="text-4xl font-bold"
+//         color="blue-gray"
+//       >
+//         {count}
+//       </Typography>
+//       <hr className="mt-2 mb-4 max-w-sm" />
+//       <Typography
+//         variant="h5"
+//         color="blue-gray"
+//         className="mt-1 font-bold"
+//       >
+//         {title}
+//       </Typography>
+//       <Typography className="text-base max-w-xs font-normal leading-7 !text-gray-500">
+//         {description}
+//       </Typography>
+//     </Card>
+//   );
+// }
 
-  
-  return (
-    <Card color="transparent" shadow={false}>
-      <Typography
-        variant="gradient"
-        className="text-4xl font-bold"
-        color="blue-gray"
-      >
-        {count}
-      </Typography>
-      <hr className="mt-2 mb-4 max-w-sm" />
-      <Typography
-        variant="h5"
-        color="blue-gray"
-        className="mt-1 font-bold"
-      >
-        {title}
-      </Typography>
-      <Typography className="text-base max-w-xs font-normal leading-7 !text-gray-500">
-        {description}
-      </Typography>
-    </Card>
-  );
-}
-
-const stats = [
-  {
-    count: "15,000M",
-    title: "Marathon Runner Progress",
-    description: "You're racing ahead in your marathon training goals.",
-  },
-  {
-    count: "$10,000+",
-    title: "Invested",
-    description: "Your financial acumen is paying off—literally.",
-  },
-  {
-    count: "4,500+",
-    title: "Hours of Exercise",
-    description:
-      "Your commitment to health is inspiring and your stats show it.",
-  },
-  {
-    count: "8,200+",
-    title: "Volunteer Hours",
-    description: "Your contributions have made an impact in your community.",
-  },
-];
+// const stats = [
+//   {
+//     count: "15,000M",
+//     title: "Marathon Runner Progress",
+//     description: "You're racing ahead in your marathon training goals.",
+//   },
+//   {
+//     count: "$10,000+",
+//     title: "Invested",
+//     description: "Your financial acumen is paying off—literally.",
+//   },
+//   {
+//     count: "4,500+",
+//     title: "Hours of Exercise",
+//     description:
+//       "Your commitment to health is inspiring and your stats show it.",
+//   },
+//   {
+//     count: "8,200+",
+//     title: "Volunteer Hours",
+//     description: "Your contributions have made an impact in your community.",
+//   },
+// ];
 
 export function About() {
 //   const imgUrl =
