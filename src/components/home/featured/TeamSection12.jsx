@@ -49,7 +49,7 @@ import {
   const members = [
     {
       img: `https://www.material-tailwind.com/img/avatar1.jpg`,
-      name: "Ryan Samuel",
+      name: "Ritesh",
       title: "Co-Founder",
     },
     {
