@@ -13,7 +13,7 @@ export function CardReview({
   title,
 }) {
   return (
-    <Card shadow={false}>
+    <Card shadow={false} className="p-4 " >
       <CardBody className="pt-0">
         <Rating value={4} className="text-amber-500" />
         <Typography
@@ -69,7 +69,7 @@ const CONTENTS = [
 ];
 export function Recent() {
   return (
-    <section className="py-20 px-8">
+    <section className="py-20 px-8 bg-[#f7f9fc]">
       <div className="mx-auto container">
         <div className="text-center">
           <Typography variant="h6" className="mb-3 uppercase">
@@ -81,7 +81,7 @@ export function Recent() {
             love our product.
           </Typography>
         </div>
-        <div className="mt-32 grid lg:grid-cols-3 grid-cols-1 gap-y-6">
+        <div className="mt-32 grid lg:grid-cols-3 grid-cols-1 gap-y-6 gap-x-6">
           {CONTENTS.map(({ name, feedback, title, date }, index) => (
             <CardReview
               key={index}

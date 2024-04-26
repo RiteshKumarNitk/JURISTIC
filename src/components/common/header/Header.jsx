@@ -295,14 +295,16 @@ export default function Header() {
 
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md">
-      <Navbar className="mx-auto shadow-none border-none px-4 py-4">
+      <Navbar className="mx-auto shadow-none border-none px-6 py-2">
         <div className="flex items-center justify-between text-blue-gray-900">
           <a
             href="#"
             className="flex title-font font-medium items-center w-16 h-16 text-gray-900 mb-4"
           >
             <img src={img} alt="" />
-          </a>
+            <Typography variant="h6" color="blue-gray" >
+           Legal Inkwell
+      </Typography> </a>
           <div className="hidden lg:block">
             <NavList />
           </div>

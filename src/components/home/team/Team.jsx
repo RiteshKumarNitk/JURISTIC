@@ -1,12 +1,13 @@
 import React from "react"
 import Heading from "../../common/Heading"
 import { team } from "../../data/Data"
-import "./team.css"
+// import "./team.css"
+import FeatureSection from "../price/FeatureSection"
 
 const Team = () => {
   return (
     <>
-      <section className='team background'>
+      {/* <div className='team background'>
         <div className='container'>
           <Heading title='Our Featured Agents' subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' />
 
@@ -42,7 +43,11 @@ const Team = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div> */}
+      <div className="bg bg-[#fff]">
+          <FeatureSection/>
+
+      </div>
     </>
   )
 }
